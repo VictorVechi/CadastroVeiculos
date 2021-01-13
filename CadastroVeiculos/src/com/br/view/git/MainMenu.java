@@ -10,8 +10,10 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class MainMenu extends JFrame {
+public class MainMenu extends JFrame implements ActionListener {
 
 	/**
 	 * 
@@ -50,6 +52,7 @@ public class MainMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public MainMenu() {
+		setTitle("Veículos");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 360, 240);
@@ -89,6 +92,7 @@ public class MainMenu extends JFrame {
 		painelInicio.add(lblinfo3);
 		
 		btnCarro = new JButton("Carro");
+		btnCarro.addActionListener(this);
 		btnCarro.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnCarro.setBounds(10, 40, 99, 23);
 		painelInicio.add(btnCarro);
@@ -110,5 +114,15 @@ public class MainMenu extends JFrame {
 		painelInfo = new JPanel();
 		tabbedPane.addTab("Informações", null, painelInfo, null);
 		painelInfo.setLayout(null);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnCarro) {
+			do_btnCarro_actionPerformed(e);
+		}
+	}
+	protected void do_btnCarro_actionPerformed(ActionEvent e) {
+		CarroWindow carro = new CarroWindow();
+		carro.setVisible(true);
+		dispose();
 	}
 }
