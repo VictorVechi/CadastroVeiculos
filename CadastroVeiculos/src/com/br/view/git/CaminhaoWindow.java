@@ -14,10 +14,10 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import com.br.classes.git.Carro;
+import com.br.classes.git.Caminhao;
 import javax.swing.border.LineBorder;
 
-public class CarroWindow extends JFrame implements ActionListener {
+public class CaminhaoWindow extends JFrame implements ActionListener {
 
 	/**
 	 * 
@@ -41,7 +41,7 @@ public class CarroWindow extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CarroWindow frame = new CarroWindow();
+					CaminhaoWindow frame = new CaminhaoWindow();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,83 +53,83 @@ public class CarroWindow extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public CarroWindow() {
+	public CaminhaoWindow() {
 		setResizable(false);
 		setTitle("Motocicleta");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 383, 290);
+		setBounds(100, 100, 396, 296);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblMarca = new JLabel("Marca:");
 		lblMarca.setForeground(Color.BLACK);
 		lblMarca.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblMarca.setBounds(10, 11, 54, 14);
 		contentPane.add(lblMarca);
-		
+
 		txtMarca = new JTextField();
-		txtMarca.setBounds(135, 8, 173, 20);
+		txtMarca.setBounds(135, 8, 221, 20);
 		contentPane.add(txtMarca);
 		txtMarca.setColumns(10);
-		
+
 		JLabel lblModelo = new JLabel("Modelo:");
 		lblModelo.setForeground(Color.BLACK);
 		lblModelo.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblModelo.setBounds(10, 37, 46, 14);
 		contentPane.add(lblModelo);
-		
+
 		txtModelo = new JTextField();
-		txtModelo.setBounds(135, 34, 173, 20);
+		txtModelo.setBounds(135, 34, 221, 20);
 		contentPane.add(txtModelo);
 		txtModelo.setColumns(10);
-		
+
 		JLabel lblAnoFab = new JLabel("Ano de Fabricação:");
 		lblAnoFab.setForeground(Color.BLACK);
 		lblAnoFab.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblAnoFab.setBounds(10, 62, 115, 14);
 		contentPane.add(lblAnoFab);
-		
+
 		txtAnoFab = new JTextField();
-		txtAnoFab.setBounds(135, 59, 173, 20);
+		txtAnoFab.setBounds(135, 59, 221, 20);
 		contentPane.add(txtAnoFab);
 		txtAnoFab.setColumns(10);
-		
+
 		JLabel lblChassi = new JLabel("Chassi:");
 		lblChassi.setForeground(Color.BLACK);
 		lblChassi.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblChassi.setBounds(10, 87, 46, 14);
 		contentPane.add(lblChassi);
-		
+
 		txtChassi = new JTextField();
-		txtChassi.setBounds(135, 84, 173, 20);
+		txtChassi.setBounds(135, 84, 221, 20);
 		contentPane.add(txtChassi);
 		txtChassi.setColumns(10);
-		
+
 		JLabel lblPlaca = new JLabel("Placa:");
 		lblPlaca.setForeground(Color.BLACK);
 		lblPlaca.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPlaca.setBounds(10, 112, 46, 14);
 		contentPane.add(lblPlaca);
-		
+
 		txtPlaca = new JTextField();
-		txtPlaca.setBounds(135, 109, 173, 20);
+		txtPlaca.setBounds(135, 109, 221, 20);
 		contentPane.add(txtPlaca);
 		txtPlaca.setColumns(10);
-		
+
 		JLabel lblEixo = new JLabel("Nº de Eixos:");
 		lblEixo.setForeground(Color.BLACK);
 		lblEixo.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblEixo.setBounds(10, 137, 69, 14);
 		contentPane.add(lblEixo);
-		
+
 		txtEixo = new JTextField();
-		txtEixo.setBounds(135, 134, 173, 20);
+		txtEixo.setBounds(135, 134, 221, 20);
 		contentPane.add(txtEixo);
 		txtEixo.setColumns(10);
-		
+
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setBackground(Color.BLACK);
 		btnVoltar.setForeground(Color.WHITE);
@@ -141,51 +141,51 @@ public class CarroWindow extends JFrame implements ActionListener {
 				dispose();
 			}
 		});
-		
+
 		JLabel lblPotencia = new JLabel("Potência(cv):");
 		lblPotencia.setForeground(Color.BLACK);
 		lblPotencia.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPotencia.setBounds(10, 162, 80, 14);
 		contentPane.add(lblPotencia);
-		
+
 		txtPotencia = new JTextField();
-		txtPotencia.setBounds(135, 159, 173, 20);
+		txtPotencia.setBounds(135, 159, 221, 20);
 		contentPane.add(txtPotencia);
 		txtPotencia.setColumns(10);
 		btnVoltar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnVoltar.setBounds(255, 218, 100, 23);
+		btnVoltar.setBounds(266, 216, 100, 23);
 		contentPane.add(btnVoltar);
-		
+
 		JButton btnSalvar = new JButton("Salvar");
 		btnSalvar.setBackground(Color.GREEN);
 		btnSalvar.setForeground(Color.WHITE);
 		btnSalvar.addActionListener(new ActionListener() {
+			//Botão de salvar
 			public void actionPerformed(ActionEvent e) {
-				//Botão de salvar
-				Carro carro = new Carro();
+				Caminhao caminhao = new Caminhao();
 				JOptionPane.showMessageDialog(null, "Dados Salvos com sucesso");
-				carro.setAnoFab(Integer.parseInt(txtAnoFab.getText()));
-				carro.setEixo(Integer.parseInt(txtEixo.getText()));
-				carro.setChassi(txtChassi.getText());
-				carro.setMarca(txtMarca.getText());
-				carro.setModelo(txtModelo.getText());
-				carro.setPlaca(txtPlaca.getText());
-				carro.setPotencia(txtPotencia.getText());
-				carro.setPorta(txtPortas.getText());
+				caminhao.setAnoFab(Integer.parseInt(txtAnoFab.getText()));
+				caminhao.setEixo(Integer.parseInt(txtEixo.getText()));
+				caminhao.setChassi(txtChassi.getText());
+				caminhao.setMarca(txtMarca.getText());
+				caminhao.setModelo(txtModelo.getText());
+				caminhao.setPlaca(txtPlaca.getText());
+				caminhao.setPotencia(txtPotencia.getText());
+				caminhao.setPorta(txtPortas.getText());
 			}
 		});
 		btnSalvar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnSalvar.setBounds(35, 218, 100, 23);
+		btnSalvar.setBounds(43, 216, 100, 23);
 		contentPane.add(btnSalvar);
 		
-		JLabel lblPortas = new JLabel("Nº Portas:");
-		lblPortas.setForeground(Color.BLACK);
-		lblPortas.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblPortas.setBounds(10, 187, 69, 14);
-		contentPane.add(lblPortas);
+		JLabel lblNewLabel = new JLabel("Nº Portas:");
+		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setBounds(10, 187, 69, 14);
+		contentPane.add(lblNewLabel);
 		
 		txtPortas = new JTextField();
-		txtPortas.setBounds(135, 184, 173, 20);
+		txtPortas.setBounds(135, 184, 221, 20);
 		contentPane.add(txtPortas);
 		txtPortas.setColumns(10);
 		
@@ -194,12 +194,12 @@ public class CarroWindow extends JFrame implements ActionListener {
 		btnLimpar.setBackground(Color.RED);
 		btnLimpar.setForeground(Color.WHITE);
 		btnLimpar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnLimpar.setBounds(145, 218, 100, 23);
+		btnLimpar.setBounds(156, 216, 100, 23);
 		contentPane.add(btnLimpar);
 		
 		JPanel painelContorno = new JPanel();
 		painelContorno.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
-		painelContorno.setBounds(0, 0, 377, 261);
+		painelContorno.setBounds(0, 0, 390, 267);
 		contentPane.add(painelContorno);
 	}
 	public void actionPerformed(ActionEvent e) {
@@ -208,7 +208,7 @@ public class CarroWindow extends JFrame implements ActionListener {
 		}
 	}
 	protected void do_btnLimpar_actionPerformed(ActionEvent e) {
-		//Botão de limpar textos
+		//Botão de limpar
 		txtAnoFab.setText(" ");
 		txtChassi.setText(" ");
 		txtEixo.setText(" ");
