@@ -1,3 +1,4 @@
 # CadastroVeiculos
-Projeto escolar de cadastro de veículos \n
+Projeto escolar de cadastro de veículos
+
 Não finalizado
