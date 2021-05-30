@@ -1,0 +1,43 @@
+body {
+    background-image: url('acorigins.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+    font: normal 15pt Arial;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-indent: 50px;
+    line-height: 30px;
+    text-align: justify;
+}
+p{
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 850px;
+    margin-left: 30px;
+}
+table{
+    text-align:center;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin-left: 350px;
+    box-shadow: 7px 7px 10px black;
+}
+a{
+    color: white;
+}
+footer p{
+    color: white;
+    font-style: italic;
+    margin-left: 570px;
+}

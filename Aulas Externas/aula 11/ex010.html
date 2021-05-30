@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: slateblue;
+        }
+        h1{
+            font:normal 20pt Arial;
+            color:white;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 150px;
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: springgreen;
+            color:white;
+        }
+        div#res{
+            font: normal 16pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificando Nacionalidade</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" id='Verificar' onclick='teste()'>
+    <div id='res'>Resultado:</div>
+    <script>
+        function teste(){
+            var local = document.getElementById('pais');
+            var res = document.getElementById('res');
+            var nacionalidade = String(local.value)
+            if(nacionalidade=='Brasil'||nacionalidade=='brasil'){
+                res.innerHTML = 'Você é brasileiro'
+            }
+            else if(nacionalidade=='Estados Unidos'||nacionalidade=='EUA'){
+                res.innerHTML = 'Você é Americano'
+            }       
+            else if(nacionalidade=='estados unidos'||nacionalidade=='eua'){
+                res.innerHTML = 'Você é Americano'
+            }       
+            else if(nacionalidade=='França'||nacionalidade=='Alemanha'){
+                res.innerHTML = 'Você é Europeu'
+            }
+            else{
+                res.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>

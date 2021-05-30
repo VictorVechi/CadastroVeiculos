@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(44, 114, 243);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 1px;
+    /* curvatura da caixa */
+    padding: 15px;
+    width: 500px;
+    /* margem */
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.664);
+    /* sombreamento da caixa */
+}
+div{
+    text-align: center;
+    padding: 8px;
+}
+footer { 
+    /* footer é o rodapé*/
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
