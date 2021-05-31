@@ -6,15 +6,18 @@ body {
     color: black;
     font: normal 15pt Arial;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-h2{
+
+h2 {
     text-indent: 50px;
     line-height: 30px;
     text-align: justify;
 }
-p{
+
+p {
     text-align: justify;
     text-indent: 50px;
     line-height: 30px;
@@ -23,14 +26,17 @@ p{
     max-width: 850px;
     margin-left: 30px;
 }
-#link{
+
+#link {
     color: white;
     margin-left: 50px;
 }
-img{
-    margin-left: 50px ;
+
+img {
+    margin-left: 50px;
 }
-footer p{
+
+footer p {
     color: white;
     font-style: italic;
     margin-left: 570px;
